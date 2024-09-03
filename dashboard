@@ -1,0 +1,535 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dashboard - Boatrustserve</title>
+    <!-- the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="1hc14Q7dhRczV6OnWz2JdZavLesyi20s9AM79Rp7">
+    <link rel="stylesheet" href="https://app.boatrustserve.com/assets/css/app.css">
+    <link rel="stylesheet" href="https://app.boatrustserve.com/assets/css/custom.css">
+    <link rel="stylesheet" href="https://app.boatrustserve.com/assets/css/screenLoader.css">
+    <link rel="stylesheet" href="https://app.boatrustserve.com/plugins/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://app.boatrustserve.com/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="https://app.boatrustserve.com/plugins/icheck/skin/all.css">
+    <link rel="stylesheet" href="https://app.boatrustserve.com/plugins/datepicker/css/bootstrap-datepicker.standalone.css">
+    <link rel="stylesheet" href="https://app.boatrustserve.com/plugins/bootstrap4-toggle/css/bootstrap4-toggle.min.css">
+    <link rel="stylesheet" href="https://app.boatrustserve.com/plugins/datatable/css/datatables.min.css">
+    <link rel="stylesheet" href="https://app.boatrustserve.com/plugins/croppie/css/croppie.min.css">
+    <link rel="stylesheet" href="https://app.boatrustserve.com/plugins/summernote/dist/summernote-bs4.min.css">
+    <link rel="stylesheet" href="https://app.boatrustserve.com/plugins/timepicker/jquery.timepicker.css">
+
+    <script src="https://app.boatrustserve.com/plugins/chart-js/chart.min.js"></script>
+    <script src="https://app.boatrustserve.com/plugins/sweetalert/js/sweetalert.min.js"></script>
+    <script src="https://app.boatrustserve.com/plugins/tradeview/tv.js"></script>
+
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://app.boatrustserve.com/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://app.boatrustserve.com/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://app.boatrustserve.com/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://app.boatrustserve.com/favicon/site.webmanifest">
+    <link rel="mask-icon" href="https://app.boatrustserve.com/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <!-- FAVICON -->
+
+        <style>
+        :root{
+        --theme: #970c0c;
+        --dashboardBg: #ffffff;
+      }
+      .navbar {
+        background-color: var(--theme);
+      }
+      .content-wrapper {
+        background-color: var(--dashboardBg);
+      }
+    </style>
+</head>
+<body class="hold-transition sidebar-mini">
+    <!-- Preloader -->
+  <div class="payment-loader">
+    <div class="loader-pendulums"></div>
+  </div>
+  <!-- /Preloader -->
+<div class="wrapper">
+
+  <nav class="main-header navbar navbar-expand navbar-dark">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link desktop-toggle" id="toggleClose" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
+        <a class="nav-link mobile-toggle" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+            <!-- User Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <img src="https://app.boatrustserve.com/uploads/avatar/avatar.png" width="28px" class="img img-circle  img-responsive" alt="User Image">
+          michelle pottak
+          <i class="fa fa-angle-down right"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <div class="dropdown-divider"></div>
+          <a href="https://app.boatrustserve.com/account/profile" class="dropdown-item">
+            <i class="fa fa-user mr-2"></i> Profile
+          </a>
+
+          <div class="dropdown-divider"></div>
+          <a href="https://app.boatrustserve.com/account/logout" class="dropdown-item dropdown-footer bg-gray"><i class="fa fa-sign-out mr-2"></i> Logout</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-light elevation-4">
+    <!-- Brand Logo -->
+    <div class="navbar-brand d-flex justify-content-center">
+      <a style="display:none;" class="nav-link  toggleopen"  data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
+      <a href="/" class="app-logo brand-link">
+                  <img src="https://app.boatrustserve.com/uploads/appLogo/app-logo-light.png" alt="App Logo" class=" img brand-image img-responsive" style="opacity: .8;">
+
+              </a>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <a href="https://app.boatrustserve.com/account/profile"><img src="https://app.boatrustserve.com/uploads/avatar/avatar.png" width="40px" class="img img-circle  img-responsive" alt="User Image"></a>
+        </div>
+        <div class="info">
+          <a href="https://app.boatrustserve.com/account/profile" class="d-block">michelle</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item">
+            <a href="https://app.boatrustserve.com/account" class="nav-link ">
+              <i class="nav-icon fa fa-home"></i>
+              <p>
+                Dashboard
+              </p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link ">
+              <i class="nav-icon fa fa-send"></i>
+              <p>
+                Transfer
+                <i class="right fa fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="https://app.boatrustserve.com/account/make-transfer/intra-bank" class="nav-link ">
+                    <i class="nav-icon fa fa"></i>
+                    <p>
+                        Intra-Bank Transfer
+                    </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://app.boatrustserve.com/account/make-transfer/inter-bank" class="nav-link ">
+                    <i class="nav-icon fa fa"></i>
+                    <p>
+                        Inter-Bank Transfer
+                    </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://app.boatrustserve.com/account/make-transfer/local" class="nav-link ">
+                    <i class="nav-icon fa fa"></i>
+                    <p>
+                        Local Transfer
+                    </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://app.boatrustserve.com/account/transfers" class="nav-link ">
+                    <i class="nav-icon fa fa"></i>
+                    <p>
+                        Transfer History
+                    </p>
+                    </a>
+                </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link ">
+              <i class="nav-icon fa fa-credit-card"></i>
+              <p>
+                Card
+                <i class="right fa fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="https://app.boatrustserve.com/account/card" class="nav-link ">
+                    <i class="nav-icon fa fa-hands"></i>
+                    <p>
+                        View Card
+                    </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://app.boatrustserve.com/account/card/create" class="nav-link ">
+                    <i class="nav-icon fa fa-hands"></i>
+                    <p>
+                       Apply for Card
+                    </p>
+                    </a>
+                </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link ">
+              <i class="nav-icon fa fa-leaf"></i>
+              <p>
+                Loan
+                <i class="right fa fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="https://app.boatrustserve.com/account/loan" class="nav-link ">
+                    <i class="nav-icon fa fa-hands"></i>
+                    <p>
+                        View Loan Application
+                    </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://app.boatrustserve.com/account/loan/create" class="nav-link ">
+                    <i class="nav-icon fa fa-hands"></i>
+                    <p>
+                       Apply for Loan
+                    </p>
+                    </a>
+                </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link ">
+              <i class="nav-icon fa fa-download"></i>
+              <p>
+                Deposit
+                <i class="right fa fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="https://app.boatrustserve.com/account/check-deposit/create" class="nav-link ">
+                    <i class="nav-icon fa fa"></i>
+                    <p>
+                    Check Deposit
+                    </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://app.boatrustserve.com/account/check-deposit" class="nav-link ">
+                    <i class="nav-icon fa fa"></i>
+                    <p>
+                        Deposit History
+                    </p>
+                    </a>
+                </li>
+            </ul>
+          </li>
+         <li class="nav-item">
+            <a href="https://app.boatrustserve.com/account/transactions" class="nav-link ">
+              <i class="nav-icon fa fa-exchange"></i>
+              <p>
+                Transactions
+              </p>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+		<section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Dashboard</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+      <!-- Small boxes (Stat box) -->
+      <div id="stripe-alert" class="alert alert-danger" style="display:none">
+		<meta>
+  </div>
+
+  <div id="success-alert" class="alert alert-success" style="display:none">
+
+  </div>
+
+  <div id="failed-alert" class="alert alert-danger" style="display:none">
+
+  </div>
+      <div class="row">
+		<!--============================ View for Non-Admin ============================-->
+		            <div class="col-lg-12 col-xs-11 h-100">
+                <!-- small box -->
+                <div class="card bg-white">
+                <div class="card-body p-0">
+                    <div class="row">
+                        <div class="col-md-12 ">
+                            <div class="table-responsive no-padding p-0">
+                            <table class="table table-hover table-borderless table-striped text-bold" >
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        Account Name
+                                    </td>
+                                    <td>
+                                        MICHELLE  POTTAK
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Account Number
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Account Type
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6">
+                <div class="info-box shadow p-3 bg-info">
+                <a href="#"  Class="info-box-icon bg-info elevation-1" data-toggle="tooltip" data-placement="bottom" title="Total Balance"><i class="fa fa-money"></i></a>
+                <div class="info-box-content">
+                    <span class="info-box-text">Account Balance</span>
+                    <span class="info-box-number">$0.00</span>
+                </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6">
+                <div class="info-box shadow p-3 bg-navy">
+                <a href="#"  Class="info-box-icon bg-navy elevation-1" data-toggle="tooltip" data-placement="bottom" title="Available Balance"><i class="fa fa-money"></i></a>
+                <div class="info-box-content">
+                    <span class="info-box-text">Ledger Balance</span>
+                    <span class="info-box-number">$0.00</span>
+                </div>
+                </div>
+            </div>
+            <div class="clearfix hidden-md-up"></div>
+            <div class="col-12 col-sm-6 col-md-6">
+                <div class="info-box shadow p-3 bg-secondary">
+                <a href="https://app.boatrustserve.com/account/transfers"  Class="info-box-icon bg-secondary elevation-1" data-toggle="tooltip" data-placement="bottom" title="Transfer History"><i class="fa fa-list"></i></a>
+                <div class="info-box-content">
+                    <span class="info-box-text">Transfer History</span>
+                </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6">
+                <div class="info-box shadow p-3 bg-danger">
+                <a href="https://app.boatrustserve.com/account/check-deposit"  Class="info-box-icon bg-danger elevation-1" data-toggle="tooltip" data-placement="bottom" title="Deposit History"><i class="fa fa-list"></i></a>
+                <div class="info-box-content">
+                    <span class="info-box-text">Deposit History</span>
+                </div>
+                </div>
+            </div>
+          <!-- Financial Charts  -->
+            <div class="col-lg-12 col-xs-11 h-100">
+                <!-- small box -->
+                <div class="card bg-white">
+                <div class="card-header bg-primary">
+                    Accounts
+                </div>
+                <div class="card-body p-0">
+                    <div class="row">
+                        <div class="col-md-12 ">
+                            <div class="table-responsive no-padding p-0">
+                            <table class="table table-hover table-borderless table-striped" >
+                                <thead>
+                      			<tr>
+                                    <th>Account</th>
+                                    <th>Balance</th>
+                                    <th>Type</th>
+                                </tr>
+                              </thead>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                        $0.00
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                </tr>
+                                                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-xs-11 h-100">
+                <!-- small box -->
+                <div class="card bg-white">
+                <div class="card-header bg-primary">
+                Transaction History
+                <span class="pull-right"><a href="https://app.boatrustserve.com/account/transfers" class=" text-white hover-danger">View all</a></span>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                          <div class="table-responsive no-padding">
+                  			<table id="dataTable" class="table table-hover table-borderless table-striped" >
+                              <thead>
+                      			<tr>
+                                    <th>ID</th>
+                                    <th>Order Id</th>
+                                    <th>Amount</th>
+                                    <th>Type</th>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Description</th>
+                                    <th>Status</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                        		                              </tbody>
+                  			</table>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>           
+            <div class="col-lg-12 col-xs-11 h-100">
+                <!-- small box -->
+                <div class="card bg-white">
+                <div class="card-header bg-primary">
+                Transfers
+                <span class="pull-right"><a href="https://app.boatrustserve.com/account/transfers" class=" text-white hover-danger">View all</a></span>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                          <div class="table-responsive no-padding">
+                  			<table id="dataTable" class="table table-hover table-borderless table-striped" >
+                              <thead>
+                      			<tr>
+                                    <th>Account</th>
+                                    <th>Name</th>
+                                    <th>Account Type</th>
+                                    <th>Status</th>
+                                    <th>Amount</th>
+                                    <th>Remarks</th>
+                                    <th>Date</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                        		                              </tbody>
+                  			</table>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+          <!-- Financial Charts  -->
+              </div>
+
+      
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+
+  <footer class="main-footer text-center">
+    <strong>Copyright &copy; 2024 <a href="https://app.boatrustserve.com">Boatrustserve</a>.</strong> All rights
+    reserved.
+  </footer>
+</div>
+<!-- ./wrapper -->
+<script src="https://app.boatrustserve.com/assets/js/jquery.min.js"></script>
+<script src="https://app.boatrustserve.com/assets/js/bootstrap.bundle.min.js"></script>
+<script src="https://app.boatrustserve.com/assets/js/theme.min.js"></script>
+<script src="https://app.boatrustserve.com/plugins/datatable/js/datatables.min.js"></script>
+<script src="https://app.boatrustserve.com/plugins/summernote/dist/summernote-bs4.min.js"></script>
+<script src="https://app.boatrustserve.com/plugins/croppie/js/croppie.min.js"></script>
+<script src="https://app.boatrustserve.com/plugins/bootstrap4-toggle/js/bootstrap4-toggle.min.js"></script>
+<script src="https://app.boatrustserve.com/plugins/datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="https://app.boatrustserve.com/plugins/axios/axios.min.js"></script>
+<script src="https://app.boatrustserve.com/plugins/loadingoverlay/loadingoverlay.min.js"></script>
+<script src="https://app.boatrustserve.com/assets/js/custom.js"></script>
+<div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- Chatra {literal} -->
+<script>
+    (function(d, w, c) {
+        w.ChatraID = 'yw9p8J4kgihZzz9tH';
+        var s = d.createElement('script');
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        s.async = true;
+        s.src = 'https://call.chatra.io/chatra.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'Chatra');
+</script>
+<!-- /Chatra {/literal} -->
+</body>
+</html>
