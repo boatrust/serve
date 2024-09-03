@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Registration - Boatrustserve</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <meta name="csrf-token" content="u1KRbOgTUV9aV8FdwAkwzK3B8dGzqrXP4md8mhro">
+    <script src="https://www.google.com/recaptcha/api.js?" async defer></script>
+
+
+  <!-- FAVICON -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <!-- FAVICON -->
+
+  <!-- STYLESHEET -->
+  <link rel="stylesheet" href="https://app.boatrustserve.com/assets/css/app.css">
+  <link rel="stylesheet" href="https://app.boatrustserve.com/assets/css/custom.css">
+  <script src="https://app.boatrustserve.com/plugins/sweetalert/js/sweetalert.min.js"></script>
+  <link rel="stylesheet" href="https://app.boatrustserve.com/plugins/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://app.boatrustserve.com/plugins/select2/css/select2.min.css">
+  <link rel="stylesheet" href="https://app.boatrustserve.com/plugins/icheck/skin/all.css">
+  <link rel="stylesheet" href="https://app.boatrustserve.com/plugins/datepicker/css/bootstrap-datepicker.standalone.css">
+
+  <style>
+     .cover-image {
+        background: url('https://app.boatrustserve.com/uploads/appBackgroundImage/background-image.png') center center no-repeat fixed !important;
+        background-size: cover !important;
+        /*position: fixed !important;*/
+        background-color: aliceblue!important;
+    }
+
+    .cover-image, .cover-image:before {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .twitter-blue{
+      color: #00acee;
+    }
+  </style>
+
+</head>
+<body class="hold-transition register-page cover-image">
+<div class="register-box">
+    <div class="register-logo">
+      <div class=" d-block text-center mt-5">
+        <a href="./">
+          <img src="https://app.boatrustserve.com/uploads/appLogo/app-logo-dark.png" class="img img-responsive" height="60px" width="220px" alt="App Logo">
+        </a>
+      </div>
+    </div>
+
+    <div class="card shadow px-3">
+      <div class="card-body register-card-body rounded">
+        <div id="stripe-alert" class="alert alert-danger" style="display:none">
+		<meta>
+  </div>
+
+  <div id="success-alert" class="alert alert-success" style="display:none">
+
+  </div>
+
+  <div id="failed-alert" class="alert alert-danger" style="display:none">
+
+  </div>
+                <p class="login-box-msg">Create New Account</p>
+
+      <form method="POST" action="https://app.boatrustserve.com/account/register">
+          <input type="hidden" name="_token" value="u1KRbOgTUV9aV8FdwAkwzK3B8dGzqrXP4md8mhro">        <!-- Fullname -->
+        <!--<div class="form-group has-feedback">-->
+        <!--  <input id="fullname" type="text" placeholder="Fullname" class="form-control " name="fullname" value="" required autocomplete="fullname" autofocus>-->
+        <!--  <span class="glyphicon glyphicon-user form-control-feedback"></span>-->
+        <!--  -->
+        <!--</div>-->
+        <!-- Fullname -->
+
+        <!-- Username -->
+        <!--<div class="form-group has-feedback">-->
+        <!--      <input id="username" type="text" placeholder="Username" class="form-control " name="username" value="" required autocomplete="username">-->
+        <!--      <span class="glyphicon glyphicon-user form-control-feedback"></span>-->
+        <!--      -->
+        <!--</div>-->
+        <!-- Username -->
+
+        <!-- Email -->
+        <!--<div class="form-group has-feedback">-->
+        <!--      <input id="email" type="email" placeholder="Email" class="form-control " name="email" value="" required autocomplete="email">-->
+        <!--      <span class="glyphicon glyphicon-envelope form-control-feedback"></span>-->
+        <!--      -->
+        <!--</div>-->
+        <!-- Email -->
+
+        <!-- Password -->
+        <!--<div class="form-group has-feedback">-->
+        <!--      <input id="password" type="password" placeholder="Password" class="form-control " name="password" required autocomplete="new-password">-->
+        <!--      <span class="glyphicon glyphicon-lock form-control-feedback"></span>-->
+        <!--      -->
+        <!--</div>-->
+        <!-- Password -->
+
+        <!-- Password-Confirmation -->
+        <!--<div class="form-group has-feedback">-->
+        <!--  <input id="password-confirm" type="password" placeholder="Retype password" class="form-control" name="password_confirmation" required autocomplete="new-password">-->
+        <!--  <span class="glyphicon glyphicon-log-in form-control-feedback"></span>-->
+        <!--</div>-->
+        <!-- Password-Confirmation -->
+        
+        <div class="form-row mb-1">
+              <div class="col-sm-4">
+                 <label for="name">First Name</label>
+                  <input type="text" name="firstname" value="" placeholder="Firstname" class="form-control " id="irstname">
+                                </div>
+              <div class="col-sm-4">
+                 <label for="name">Middle Name (Optional)</label>
+                  <input type="text" name="middlename" value="" placeholder="Middlename" class="form-control " id="middlename">
+                                </div>
+              <div class="col-sm-4">
+                 <label for="name">Last Name</label>
+                  <input type="text" name="lastname" value="" placeholder="Lastname" class="form-control " id="lastname">
+                                </div>
+              <div class="col-sm-4">
+                    <label for="email" class="control-label">Email</label>
+                    <input type="email" name="email" value="" class="form-control " id="email" placeholder="Email" >
+                                  </div>
+    
+              <div class="col-sm-4">
+                <label for="email" class="control-label">Username</label>
+                <input type="text"  name="username" value="" class="form-control " id="username" placeholder="Username">
+                              </div>
+              <div class="col-sm-4">
+                  <div><label class="label-block">Phone</label></div>
+                  <input type="text" name="phone" value="" class="form-control  " placeholder="Phone" >
+                                </div>
+              <div class="col-sm-6">
+                    <label for="password" class="control-label">Password</label>
+                    <input type="password" name="password" class="form-control " id="password" placeholder="Password">
+                                  </div>
+              <div class="col-sm-6">
+                    <label for="account_pin" class="control-label">Account Pin</label>
+                    <input type="password" name="account_pin" class="form-control " id="account_pin" placeholder="Account Pin">
+                                  </div>
+              <div class="col-sm-6">
+                <label for="password_confirmation" class="control-label">Confirm Password</label>
+                <input type="password"  name="password_confirmation" class="form-control " id="password_confirmation" placeholder="Confirm Password">
+                            </div>
+           <div class="col-sm-6">
+                <div><label class="label-block">Security Question</label></div>
+                <select name="security_question" class="form-control ">
+                    <option value="">Select-Security-Question</option>
+                    <option value="What was the street name you lived in as a child?">What was the street name you lived in as a child?</option>
+                    <option value="In what city or town was your first job?">In what city or town was your first job?</option>
+                    <option value="What primary school did you attend?">What primary school did you attend?</option>
+                    <option value="In what city or town was your first job?">In what city or town was your first job?</option>
+                    <option value="What was the make and model of your first car?">What was the make and model of your first car?</option>
+                    <option value="What is your oldest cousin\'s first and last name?">What is your oldest cousin\'s first and last name?</option>
+                </select>
+                            </div>
+            <div class="col-sm-6">
+                    <label for="security_answer" class="control-label">Security Answer</label>
+                    <input type="text" name="security_answer" class="form-control " id="security_answer" placeholder="Security Answer">
+                                  </div>
+        </div>
+        <div class="form-row mb-1">
+          <div id="birthday" class="col-sm-4">
+             <label for="name">Birthday</label>
+              <input type="text" name="birthday" value="" placeholder="Birthday" class="form-control ">
+                          </div>
+          <div class="col-sm-4">
+              <div><label class="label-block">Sex</label></div>
+              <select name="sex" class="form-control " placeholder="Phone">
+                <option value="">Select-Sex</option>
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+              </select>
+                        </div>
+          <div class="col-sm-4">
+              <div><label class="label-block">Marital Status</label></div>
+              <select name="marital_status" class="form-control " >
+                <option value="">Select-Marital-Status</option>
+                <option value="single">Single</option>
+                <option value="married">Married</option>
+                <option value="divorce">Divorce</option>
+              </select>
+                        </div>
+        </div>
+        <div class="form-row mb-1">
+             <div class="col-sm-4">
+                <label for="occupation" class="control-label">Occupation</label>
+                <input type="text" name="occupation" class="form-control " value="" id="occupation" placeholder="Occupation">
+                             </div>
+             <div class="col-sm-8">
+                <label for="address" class="control-label">Address</label>
+                <input type="text" name="address" class="form-control " value="" id="address" placeholder="Address">
+                             </div>
+        </div>
+        
+        <!-- Submit Button -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="icheck-primary">
+              <input type="checkbox" id="agreeTerms" name="terms" value="agree">
+              <label for="agreeTerms">
+               I agree to the <a href="#">terms</a>
+              </label>
+            </div>
+          </div>
+          <!-- /.col -->
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- Submit Button -->
+      </form>
+
+      <a href="https://app.boatrustserve.com/account/login" class="text-center">I already have an account</a>
+    </div>
+    <!-- /.form-box -->
+    </div>
+</div>
+<!-- /.register-box -->
+
+
+<script src="https://app.boatrustserve.com/assets/js/jquery.min.js"></script>
+<script src="https://app.boatrustserve.com/assets/js/bootstrap.bundle.min.js"></script>
+<script src="https://app.boatrustserve.com/assets/js/theme.min.js"></script>
+<script src="https://app.boatrustserve.com/plugins/datatable/js/datatables.min.js"></script>
+<script src="https://app.boatrustserve.com/plugins/summernote/dist/summernote-bs4.min.js"></script>
+<script src="https://app.boatrustserve.com/plugins/croppie/js/croppie.min.js"></script>
+<script src="https://app.boatrustserve.com/plugins/datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="https://app.boatrustserve.com/assets/js/custom.js"></script>
+</body>
+</html>
